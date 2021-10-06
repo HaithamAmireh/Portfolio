@@ -1,18 +1,11 @@
 {% extends 'main/base.html' %}
-
+{% load static %}
 {% block title %}
 Haitham Amireh
 {% endblock title %}
 
 {% block content %}
 <section class="hero">
-    <div class="logo">
-        <svg width="50" height="50" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
-            clip-rule="evenodd">
-            <path
-                d="M16 3.383l-.924-.383-7.297 17.617.924.383 7.297-17.617zm.287 3.617l6.153 4.825-6.173 5.175.678.737 7.055-5.912-7.048-5.578-.665.753zm-8.478 0l-6.249 4.825 6.003 5.175-.679.737-6.884-5.912 7.144-5.578.665.753z" />
-        </svg>
-    </div>
     {% include 'main/navbar.html' %}
     <div class="intro-area">
         <div class="introduction">
@@ -45,9 +38,16 @@ Haitham Amireh
     </div>
 </section>
 <section class="about_me-section" id="about_me">
-    <p>
-        Whats up
-    </p>
+    <div class="information">
+        <h2>About Me</h2>
+        <p>
+            Hello, my name is Haitham Amireh. I am a Software Developer, I love to code and learn new things.
+            Passions other than programming are gaming, anime, and reading manga.
+        </p>
+    </div>
+    <div class="avatar-container">
+            <img src="{% static 'images/head.jpg'%}" alt="avatar" class="avatar">
+    </div>
 </section>
 <section class="Project-section" id="proj"></section>
 <section class="Contact-section" id="contact"></section>

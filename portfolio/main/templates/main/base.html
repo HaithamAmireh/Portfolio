@@ -6,17 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-    <link rel="stylesheet" href="{% static 'js/move.js' %}" />
-    <link rel="icon"href="{% static 'images/favicon.ico' %}">
+    <!--<link rel="stylesheet" href="{% static 'javascript/nav.js' %}" />
+    -->
+        <link rel="icon"href="{% static 'images/favicon.ico' %}">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a990a2e6d2.js" crossorigin="anonymous"></script>
     <title>
         {% block title %}
         {% endblock title %}</title>
-</head>
-<body>
-    {% block content %}
+    </head>
+    <body>
+        {% block content %}
         
-    {% endblock content %}
-    
-</body>
-</html>
+        {% endblock content %}
+        
+    </body>
+    <script src="{% static 'javascript/nav.js' %}"></script>
+    </html>

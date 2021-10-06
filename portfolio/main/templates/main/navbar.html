@@ -1,6 +1,13 @@
 {% load static %}
 <div class="navbar">
-    <ul class="navigation">
+    <div class="logo">
+        <svg width="50" height="50" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+            clip-rule="evenodd">
+            <path
+                d="M16 3.383l-.924-.383-7.297 17.617.924.383 7.297-17.617zm.287 3.617l6.153 4.825-6.173 5.175.678.737 7.055-5.912-7.048-5.578-.665.753zm-8.478 0l-6.249 4.825 6.003 5.175-.679.737-6.884-5.912 7.144-5.578.665.753z" />
+        </svg>
+    </div>
+    <ul class="navigation" id = "nav-list">
         <li>
             <a href="#">Home</a>
         </li>
@@ -11,11 +18,16 @@
             <a href="#">Skills</a>
         </li>
         <li>
-            <a href="#">Resume</a>
+            <a href="{% static 'etc/HaithamAmireh.pdf' %}" target="_blank">Resume</a>
         </li>
 
         <li>
             <a href="#contact">Contact me</a>
         </li>
     </ul>
+    <button class = "hamburger" id = "hamburger">
+        <i class="fas fa-bars">
+        </i>
+
+    </button>
 </div>

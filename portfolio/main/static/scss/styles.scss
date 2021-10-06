@@ -1,0 +1,158 @@
+$button-color:#df82a09a;
+$secondary-color:#fff;
+$font-stack: 'Oswald', sans-serif;
+body{
+    margin:0;
+    padding:0;
+}
+
+section{
+    background-color: yellow;
+}
+
+.hero {
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    color: rgb(255, 255, 255);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: $font-stack;    
+    letter-spacing: .2rem;
+}
+.intro-area{
+    display:flex;
+    height: 100%;
+    justify-content:space-between;
+    align-items: center;
+}
+.introduction{
+    font-size:35px;
+    margin-left: 50px;
+    margin-bottom: 80px;
+    text-align: left;
+    
+    h1{
+        margin-bottom: 0;
+    }
+
+    p{
+        margin-top: 5px;
+    }
+}
+.button{
+    width:200px;
+    height:50px;
+    border-radius: 30px;
+    background-color: $button-color;
+    text-align:center;
+    font-size: 35px;
+    margin-top: 20px;
+    text-decoration: none;
+
+    &:hover{
+    background-color: #FAACA8;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+    cursor: pointer;
+    }
+    &:active{
+        background-color:darken($button-color, 10%);
+        color:#fff;
+    }
+}
+.navbar{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    margin: 0;
+
+    .navigation{
+        list-style-type: none;    
+        display:flex;
+        margin:0;
+    }
+    a{
+    text-decoration: none;
+    display: block;
+    padding: .5em;
+    padding-top: 0.5em;
+    color: white;
+    font-size: 1.3em;
+
+    &:hover{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    border-radius: 8px;
+    }
+    }
+}
+.navigation.show{
+    display:none;
+}
+.hamburger{
+    display:none;
+}
+
+.socials{
+    padding-right: 10px;
+    padding-bottom: 60px;
+    
+    svg{
+        padding-bottom: 30px;
+
+        &:hover{
+            fill: rgb(161,161, 161);
+        }
+    }
+}
+.about_me-section{
+    background-image: linear-gradient( 92.7deg,  rgba(245,212,212,1) 8.5%, rgba(252,251,224,1) 90.2% );
+    font-family: $font-stack;
+    padding: 80px;
+    display:flex;
+    justify-content:space-around;
+}
+.information{
+    h2{
+        font-size: 45px;
+    }
+    p{
+        font-size: 25px;
+    }
+}
+.avatar-container{
+    display:flex;
+    align-items:center;
+    .avatar{
+        width: 250px;
+        border-radius: 50%;
+}
+}
+
+footer{
+    background-color:black;
+    height:100px;
+}
+
+@media only screen and (max-width:1000px){
+    .about_me-section{
+        flex-wrap: wrap;
+    }
+    .hamburger{
+        display:block;
+        border:0;
+        background-color:transparent;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+}
+    .navbar{
+        .navigation{
+            display:block;
+        }
+    }
+}
