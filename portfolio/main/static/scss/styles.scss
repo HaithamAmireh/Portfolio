@@ -1,9 +1,29 @@
 $button-color:#df82a09a;
 $secondary-color:#fff;
 $font-stack: 'Oswald', sans-serif;
+
+::-webkit-scrollbar {
+    width: 10px;
+    &-track{
+        box-shadow: inset 0 0 20px rgba(146, 144, 144, 0.685); 
+        border-radius: 10px;
+    }
+    &-thumb{
+        background-image: linear-gradient( 135deg, #A0FE65 10%, #FA016D 100%);
+        border-radius: 10px;
+
+    }
+    &-thumb:hover{
+        background-image: linear-gradient( 135deg, #65a13f 10%, #ca0359 100%); 
+
+    }
+}
+
 body{
     margin:0;
     padding:0;
+    overflow-x: hidden ;
+    background-color: transparent;
 }
 
 section{
@@ -132,6 +152,63 @@ section{
         border-radius: 50%;
 }
 }
+.Project-section{
+    font-family: $font-stack;
+    padding: 30px 80px;
+    background-color: #feeafc;
+    background-image: linear-gradient( 135deg, #90F7EC 10%, #32CCBC 100%);
+    h2{
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .proj-container{
+        padding: 40px;
+        display:flex;
+        justify-content:space-around;
+    }
+    .project-card{
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        background-color: #f7f7f7e7;
+        width:300px;
+        height: 500px;
+        border-radius: 5px;
+        margin: 10px;
+        hr{
+            border: 0;
+            clear:both;
+            display:block;
+            width: 100%;               
+            background-color:#141414;
+            height: 1px;
+        }
+        .info{
+            padding:20px;
+            display:flex;
+            flex-direction: column;
+            
+            h3{
+                font-size: 20px;
+            }
+            .demo-media{
+                img{
+                    margin-top: 25px;
+                    width:250px;
+                }
+            }
+            .description{
+                p{
+                    font-size: 15px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    .second-card{
+        background-color:blue;
+        height: 150px; 
+    }
+}
 
 footer{
     background-color:black;
@@ -154,5 +231,9 @@ footer{
         .navigation{
             display:block;
         }
+    }
+    .proj-container{
+        display:flex;
+        flex-wrap: wrap;
     }
 }

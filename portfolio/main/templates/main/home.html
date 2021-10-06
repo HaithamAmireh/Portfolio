@@ -11,7 +11,7 @@ Haitham Amireh
         <div class="introduction">
             <h1>Haitham Amireh</h1>
             <p>Software Developer</p>
-            <div class="button" onclick="scrollIntoView()">
+            <div class="button" onclick="scrollIntoView({behavior: 'smooth'})">
                 About me
             </div>
         </div>
@@ -49,7 +49,10 @@ Haitham Amireh
             <img src="{% static 'images/head.jpg'%}" alt="avatar" class="avatar">
     </div>
 </section>
-<section class="Project-section" id="proj"></section>
+<section class="Project-section" id="proj">
+    {% include 'main/projects.html'%}
+
+</section>
 <section class="Contact-section" id="contact"></section>
 <footer></footer>
 {% endblock content %}
