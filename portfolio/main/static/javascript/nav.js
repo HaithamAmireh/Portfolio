@@ -6,9 +6,3 @@ function toggleButton(){
 }
 
 hamburgerButton.addEventListener('click', toggleButton);
-
-const element = document.getElementById('proj')
-
-element.scrollIntoView({
-    behavior:'smooth',
-});
